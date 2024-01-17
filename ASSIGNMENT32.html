@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICE</title>''
+</head>
+<style>
+    body{
+        background-color: #fce0de;
+    }
+    .container{
+        width: 250px;
+        
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        color: white;
+        margin-top:50px;
+        padding: 29px;
+        }
+        .dice{
+            height: 150px;
+            margin: 20px auto;
+            display: block;
+
+        }
+        .btn-roll{
+            width: 190px;
+            display: block;
+            margin: 30px auto;
+            padding: 10px 50px; 
+            font-size: 17px;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 8px 8px ;
+            cursor: pointer ;
+            background-color: rgb(90, 35, 35);
+            color: white;
+            border: none;
+
+            
+        }
+</style>
+<body>
+
+
+    <div class="container"> 
+
+        <img src="one dice.png" alt="dice"   id="dice" class="dice">
+        <button type="button" class="btn-roll" onclick="rollDice()">
+            ROLL The Dice </button>
+
+    </div>
+
+    
+
+    <script>
+        function rollDice(){
+
+        
+        const min = 1;
+        const max = 7;
+        const num = Math.floor(Math.random() * (max-min))+min;
+        
+        const diceElement = document.getElementById('dice');
+            if(num==1){
+                diceElement.src='one dice.png';
+            }
+            else if(num==2){
+                diceElement.src="two dice.png"
+            }
+            
+            else if(num==3){
+                diceElement.src="three dice.png"
+            }
+            else if(num==4){
+                diceElement.src="four dice.png"
+            }
+            else if(num==5){
+                diceElement.src="five dice.png"
+            }
+            else if(num==6){
+                diceElement.src="six dice.png"
+            }
+    }
+    </script>
+</body>
+</html>
